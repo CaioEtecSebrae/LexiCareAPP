@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <br.gov.sp.etec.lexicare.views.MaxWidthLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="28dp">
+
+            <!-- HEADER (Estilo Criar Conta) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:background="@color/white"> <!-- Fundo igual ao da tela -->
+
+                <!-- Botão Voltar (Quadrado Azul) -->
+                <Button
+                android:id="@+id/btnVoltarConfig"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/button_secondary"
+                android:insetTop="0dp"
+                android:padding="0dp"
+                android:text="←"
+                android:textSize="@dimen/ts_24"/>
+
+                <!-- Título -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Meu Perfil"
+                    android:textSize="@dimen/ts_22"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" /> <!-- Cor preta do texto -->
+
+            </LinearLayout>
+
+            <!-- CONTEÚDO DO FORMULÁRIO -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- FOTO DE PERFIL -->
+                <FrameLayout
+                    android:id="@+id/flAvatar"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/bg_avatar_foto"
+                    android:clickable="true"
+                    android:contentDescription="Alterar foto de perfil"
+                    android:focusable="true">
+
+                    <TextView
+                        android:id="@+id/tvAvatarPlaceholder"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="👤"
+                        android:textSize="@dimen/ts_48" />
+
+                    <ImageView
+                        android:id="@+id/ivFotoPerfil"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="Foto de perfil"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <Button
+                    android:id="@+id/btnAlterarFoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="18dp"
+                    android:background="@drawable/button_secondary"
+                    android:minHeight="44dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:text="Alterar foto"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/ts_14"
+                    android:textStyle="bold" />
+
+                <!-- CAMPO: NOME -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nome"
+                    android:textColor="@color/text_hint"
+                    android:textSize="@dimen/ts_14"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etNome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/bg_input_field"
+                    android:hint="Digite seu nome"
+                    android:inputType="textPersonName"
+                    android:paddingHorizontal="14dp"
+                    android:paddingVertical="12dp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint" />
+
+                <!-- CAMPO: IDADE -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="Idade"
+                    android:textColor="@color/text_hint"
+                    android:textSize="@dimen/ts_14"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etIdade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/bg_input_field"
+                    android:hint="Ex: 14"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:paddingHorizontal="14dp"
+                    android:paddingVertical="12dp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint" />
+
+                <!-- CAMPO: SÉRIE / ANO -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="Série / Ano"
+                    android:textColor="@color/text_hint"
+                    android:textSize="@dimen/ts_14"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etSerie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/bg_input_field"
+                    android:hint="Ex: 8º ano - Ensino Fundamental"
+                    android:inputType="text"
+                    android:paddingHorizontal="14dp"
+                    android:paddingVertical="12dp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint" />
+
+
+                <!-- SEÇÃO: ALTERAÇÃO DE SENHA -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="Senha"
+                    android:textColor="@color/text_hint"
+                    android:textSize="@dimen/ts_14" />
+
+                <EditText
+                    android:id="@+id/etNovaSenha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_input_field"
+                    android:hint="Nova senha (6 a 15 caracteres)"
+                    android:inputType="textPassword"
+                    android:maxLength="15"
+                    android:maxLines="1"
+                    android:paddingHorizontal="14dp"
+                    android:paddingVertical="12dp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint" />
+
+                <EditText
+                    android:id="@+id/etConfirmarSenha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_input_field"
+                    android:hint="Confirmar nova senha"
+                    android:inputType="textPassword"
+                    android:maxLength="15"
+                    android:maxLines="1"
+                    android:paddingHorizontal="14dp"
+                    android:paddingVertical="12dp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint" />
+
+
+                <!-- BOTÃO SALVAR -->
+                <Button
+                    android:id="@+id/btnSalvarPerfil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:background="@drawable/card_blue"
+                    android:minHeight="56dp"
+                    android:text="Salvar alterações"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/ts_16"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:background="@drawable/card_blue"
+                    android:minHeight="56dp"
+                    android:text="Logout"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/ts_16"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </br.gov.sp.etec.lexicare.views.MaxWidthLinearLayout>
+    </ScrollView>
+</FrameLayout>

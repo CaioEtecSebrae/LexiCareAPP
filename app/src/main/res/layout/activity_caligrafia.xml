@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <br.gov.sp.etec.lexicare.views.MaxWidthLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!-- CABEÇALHO FIXO (Não rola com a tela) -->
+        <FrameLayout
+            android:id="@+id/headerTopo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="14dp"
+            android:background="@color/background_card">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnVoltar"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/button_secondary"
+                    android:text="←"
+                    android:textSize="@dimen/ts_24"
+                    android:padding="0dp"
+                    android:insetTop="0dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="Apoio à Caligrafia"
+                    android:textSize="@dimen/ts_20"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"/>
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- CONTEÚDO ROLÁVEL -->
+        <ScrollView
+            android:id="@+id/scrollCaligrafia"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- TÍTULO DA LETRA ATUAL -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Trace a letra"
+                        android:textSize="@dimen/ts_14"
+                        android:textColor="@color/text_hint"/>
+
+                    <TextView
+                        android:id="@+id/tvLetraAtual"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="A"
+                        android:textSize="@dimen/ts_38"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary"/>
+                </LinearLayout>
+
+                <!-- FEEDBACK DO USUÁRIO (logo abaixo da letra, sempre visível em qualquer tela) -->
+                <TextView
+                    android:id="@+id/tvFeedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:minLines="2"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:paddingTop="8dp"
+                    android:textSize="@dimen/ts_15"
+                    android:textStyle="bold"
+                    android:textColor="@color/success"/>
+
+                <!-- ÁREA DE DESENHO (CANVAS) -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/canvas_altura"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp">
+
+                    <br.gov.sp.etec.lexicare.views.CanvasCaligrafia
+                        android:id="@+id/canvasCaligrafia"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/background_card"/>
+                </androidx.cardview.widget.CardView>
+
+                <!-- TEXTO DE INSTRUÇÃO -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:text="Use o dedo, o mouse ou a caneta para traçar a letra sobre o modelo pontilhado."
+                    android:textSize="@dimen/ts_14"
+                    android:textColor="@color/text_hint"
+                    android:gravity="center"/>
+
+                <!-- BOTÕES DE AÇÃO -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="20dp">
+
+                    <Button
+                        android:id="@+id/btnVerificar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:minHeight="50dp"
+                        android:layout_weight="1"
+                        android:text="Verificar"
+                        android:textSize="@dimen/ts_15"
+                        android:textStyle="bold"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/button_rounded"/>
+
+                    <Button
+                        android:id="@+id/btnProxima"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:minHeight="50dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="10dp"
+                        android:text="Próxima"
+                        android:textSize="@dimen/ts_15"
+                        android:textStyle="bold"
+                        android:textAllCaps="false"
+                        android:background="@drawable/button_secondary"/>
+                </LinearLayout>
+
+
+                <!-- BOTÃO LIMPAR / TENTAR DE NOVO -->
+                <Button
+                    android:id="@+id/btnLimpar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="6dp"
+                    android:gravity="center"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:text="Limpar e tentar de novo"
+                    android:textSize="@dimen/ts_15"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:hyphenationFrequency="none"
+                    android:background="@drawable/button_secondary"/>
+
+                <!-- PROGRESSO -->
+                <TextView
+                    android:id="@+id/tvProgresso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="@dimen/ts_14"
+                    android:textColor="@color/text_hint"/>
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </br.gov.sp.etec.lexicare.views.MaxWidthLinearLayout>
+</FrameLayout>

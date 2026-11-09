@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MaxWidthLinearLayout">
+        <!-- Largura máxima própria desta coluna. Se não for informada, usa @dimen/content_max_width (sem limite prático). -->
+        <attr name="larguraMaxima" format="dimension" />
+    </declare-styleable>
+</resources>

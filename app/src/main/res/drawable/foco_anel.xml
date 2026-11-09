@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Anel de foco: aparece em botões/campos ao navegar com controle remoto (TV), teclado ou D-pad -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <corners android:radius="14dp"/>
+    <stroke android:width="3dp" android:color="@color/warning"/>
+</shape>

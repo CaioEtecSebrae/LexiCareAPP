@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- CABEÇALHO FIXO -->
+    <FrameLayout
+        android:id="@+id/headerTopo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="14dp"
+        android:background="@color/background_card">
+
+        <br.gov.sp.etec.lexicare.views.MaxWidthLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnVoltar"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/button_secondary"
+                android:text="←"
+                android:textSize="@dimen/ts_24"
+                android:padding="0dp"
+                android:insetTop="0dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Anotações"
+                android:textSize="@dimen/ts_20"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"/>
+
+        </br.gov.sp.etec.lexicare.views.MaxWidthLinearLayout>
+    </FrameLayout>
+
+    <!-- CONTEÚDO ROLÁVEL -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <br.gov.sp.etec.lexicare.views.MaxWidthLinearLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- CAMPO: TÍTULO -->
+            <EditText
+                android:id="@+id/etTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="52dp"
+                android:hint="Título da anotação..."
+                android:padding="14dp"
+                android:background="@drawable/edittext_rounded"
+                android:textSize="@dimen/ts_17"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_hint"
+                android:inputType="textCapSentences"
+                android:maxLength="32"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:ellipsize="end" />
+
+            <!-- CAMPO: CONTEÚDO -->
+            <EditText
+                android:id="@+id/etConteudo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="150dp"
+                android:layout_marginTop="10dp"
+                android:hint="Escreva sua anotação aqui..."
+                android:gravity="top"
+                android:padding="14dp"
+                android:background="@drawable/edittext_rounded"
+                android:textSize="@dimen/ts_16"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_hint"
+                android:inputType="textCapSentences|textMultiLine"
+                android:imeOptions="actionNone"
+                android:minLines="6"
+                android:scrollbars="vertical"
+                android:overScrollMode="ifContentScrolls"
+                android:hyphenationFrequency="none"
+                android:breakStrategy="simple" />
+
+            <!-- BOTÕES DE AÇÃO -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <Button
+                    android:id="@+id/btnMicrofone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="70dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:text="Falar"
+                    android:textSize="@dimen/ts_14"
+                    android:minWidth="0dp"
+                    android:gravity="center"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="9sp"
+                    app:autoSizeMaxTextSize="14sp"
+                    app:autoSizeStepGranularity="1sp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/button_secondary"/>
+
+                <Button
+                    android:id="@+id/btnCorrigir"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="70dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:text="Corrigir"
+                    android:textSize="@dimen/ts_14"
+                    android:minWidth="0dp"
+                    android:gravity="center"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="9sp"
+                    app:autoSizeMaxTextSize="14sp"
+                    app:autoSizeStepGranularity="1sp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/button_secondary"/>
+
+                <Button
+                    android:id="@+id/btnOuvir"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="70dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:text="Ouvir"
+                    android:textSize="@dimen/ts_14"
+                    android:minWidth="0dp"
+                    android:gravity="center"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="9sp"
+                    app:autoSizeMaxTextSize="14sp"
+                    app:autoSizeStepGranularity="1sp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/button_secondary"/>
+
+                <Button
+                    android:id="@+id/btnSalvar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="70dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp"
+                    android:text="Salvar"
+                    android:textSize="@dimen/ts_14"
+                    android:minWidth="0dp"
+                    android:gravity="center"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="9sp"
+                    app:autoSizeMaxTextSize="14sp"
+                    app:autoSizeStepGranularity="1sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:background="@drawable/button_rounded"/>
+            </LinearLayout>
+
+            <!-- TÍTULO DA SEÇÃO DE ANOTAÇÕES -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Anotações salvas"
+                android:textSize="@dimen/ts_14"
+                android:textStyle="bold"
+                android:textColor="@color/text_hint"/>
+
+            <!-- LISTA DE ANOTAÇÕES -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAnotacoes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:nestedScrollingEnabled="false"/>
+
+        </br.gov.sp.etec.lexicare.views.MaxWidthLinearLayout>
+    </ScrollView>
+</LinearLayout>

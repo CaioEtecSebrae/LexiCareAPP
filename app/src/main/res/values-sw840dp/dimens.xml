@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ts_11">14sp</dimen>
+    <dimen name="ts_12">16sp</dimen>
+    <dimen name="ts_13">17sp</dimen>
+    <dimen name="ts_14">18sp</dimen>
+    <dimen name="ts_15">20sp</dimen>
+    <dimen name="ts_16">21sp</dimen>
+    <dimen name="ts_17">22sp</dimen>
+    <dimen name="ts_18">23sp</dimen>
+    <dimen name="ts_20">26sp</dimen>
+    <dimen name="ts_22">29sp</dimen>
+    <dimen name="ts_24">31sp</dimen>
+    <dimen name="ts_26">34sp</dimen>
+    <dimen name="ts_32">42sp</dimen>
+    <dimen name="ts_38">49sp</dimen>
+    <dimen name="ts_48">62sp</dimen>
+    <dimen name="ts_68">88sp</dimen>
+    <dimen name="ts_72">94sp</dimen>
+    <dimen name="content_max_width">4000dp</dimen>
+    <dimen name="menu_card_altura">160dp</dimen>
+    <dimen name="canvas_altura">480dp</dimen>
+    <dimen name="exercicio_card_altura">330dp</dimen>
+    <dimen name="palavra_altura">200dp</dimen>
+    <dimen name="avatar_dashboard">64dp</dimen>
+</resources>

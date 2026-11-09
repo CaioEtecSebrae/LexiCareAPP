@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ajustar foto"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/ts_20"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Arraste a foto e use os controles para escolher o que aparece no círculo."
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/ts_13" />
+
+        <br.gov.sp.etec.lexicare.views.FotoEditorView
+            android:id="@+id/fotoEditor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Zoom (escala da foto)"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/ts_14"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/sbZoom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:max="300"
+            android:progress="0" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Tamanho do recorte"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/ts_14"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/sbRecorte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:max="55"
+            android:progress="45" />
+
+        <Button
+            android:id="@+id/btnGirarFoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:minHeight="48dp"
+            android:background="@drawable/button_secondary"
+            android:text="↻ Girar foto"
+            android:textAllCaps="false"
+            android:textSize="@dimen/ts_15"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCancelarFoto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="50dp"
+                android:background="@drawable/button_secondary"
+                android:text="Cancelar"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnSalvarFoto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:minHeight="50dp"
+                android:background="@drawable/button_rounded"
+                android:text="Usar foto"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

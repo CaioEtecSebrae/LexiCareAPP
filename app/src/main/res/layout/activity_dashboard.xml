@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <br.gov.sp.etec.lexicare.views.MaxWidthLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="28dp">
+
+            <!-- ============================================== -->
+            <!-- CABEÇALHO (HEADER)                             -->
+            <!-- ============================================== -->
+            <FrameLayout
+                android:id="@+id/headerTopo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="24dp"
+                android:background="@drawable/bg_dashboard_header">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Linha superior: Texto + Avatar -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="8dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="LexiCare • Seu espaço de aprendizagem"
+                            android:textSize="@dimen/ts_13"
+                            android:textColor="#DDEEFF" />
+
+                        <ImageView
+                            android:id="@+id/btnConfiguracoes"
+                            android:layout_width="@dimen/avatar_dashboard"
+                            android:layout_height="@dimen/avatar_dashboard"
+                            android:padding="5dp"
+                            android:scaleType="centerCrop"
+                            android:src="@android:drawable/ic_menu_myplaces"
+                            android:contentDescription="Abrir meus dados"
+                            android:background="@drawable/bg_avatar_perfil"
+                            android:tag="circular"
+                            android:clipToOutline="true"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_marginStart="12dp" />
+                    </LinearLayout>
+
+                    <!-- Saudação ao usuário -->
+                    <TextView
+                        android:id="@+id/tvSaudacao"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Olá, Usuário"
+                        android:textSize="@dimen/ts_26"
+                        android:textStyle="bold"
+                        android:textColor="@color/white" />
+
+                    <!-- Pílula de Tarefas de Hoje -->
+                    <TextView
+                        android:id="@+id/tvTarefasHoje"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="Tarefas de hoje: 0"
+                        android:textSize="@dimen/ts_14"
+                        android:textColor="@color/white"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:background="@drawable/pill_primary_light" />
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- ============================================== -->
+            <!-- CONTEÚDO PRINCIPAL                             -->
+            <!-- ============================================== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Subtítulo -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Escolha uma atividade para treinar leitura, escrita ou organização."
+                    android:textSize="@dimen/ts_14"
+                    android:textColor="@color/text_hint" />
+
+                <!-- Título do Menu -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:text="Menu rápido"
+                    android:textSize="@dimen/ts_14"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_hint" />
+
+                <!-- Grade de Botões (Menu) -->
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="@integer/menu_colunas"
+                    android:layout_marginTop="4dp">
+
+                    <!-- Botão: Exercícios -->
+                    <Button
+                        android:id="@+id/btnExercicios"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/menu_card_altura"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="fill"
+                        android:layout_margin="6dp"
+                        android:text="Leitura"
+                        android:textSize="@dimen/ts_15"
+                        android:textStyle="bold"
+                        android:textAllCaps="false"
+                        android:background="@drawable/card_blue" />
+
+                    <!-- Botão: Caligrafia -->
+                    <Button
+                        android:id="@+id/btnCaligrafia"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/menu_card_altura"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="fill"
+                        android:layout_margin="6dp"
+                        android:text="Caligrafia"
+                        android:textSize="@dimen/ts_15"
+                        android:textStyle="bold"
+                        android:textAllCaps="false"
+                        android:background="@drawable/card_green" />
+
+                    <!-- Botão: Anotações -->
+                    <Button
+                        android:id="@+id/btnAnotacoes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/menu_card_altura"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="fill"
+                        android:layout_margin="6dp"
+                        android:text="Anotações"
+                        android:textSize="@dimen/ts_15"
+                        android:textStyle="bold"
+                        android:textAllCaps="false"
+                        android:background="@drawable/card_red" />
+
+                    <!-- Botão: Calendário -->
+                    <Button
+                        android:id="@+id/btnCalendario"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/menu_card_altura"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="fill"
+                        android:layout_margin="6dp"
+                        android:text="Calendário"
+                        android:textSize="@dimen/ts_15"
+                        android:textStyle="bold"
+                        android:textAllCaps="false"
+                        android:background="@drawable/card_purple" />
+
+                </GridLayout>
+
+            </LinearLayout>
+        </br.gov.sp.etec.lexicare.views.MaxWidthLinearLayout>
+    </ScrollView>
+</FrameLayout>

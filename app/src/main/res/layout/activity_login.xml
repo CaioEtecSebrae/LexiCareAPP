@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+<br.gov.sp.etec.lexicare.views.MaxWidthLinearLayout
+    app:larguraMaxima="@dimen/form_max_width"
+    android:layout_gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    android:paddingTop="40dp"
+    android:paddingBottom="36dp">
+<TextView
+    android:layout_width="88dp"
+    android:layout_height="88dp"
+    android:gravity="center"
+    android:text="📖"
+    android:textSize="@dimen/ts_48"
+    android:background="@drawable/button_rounded"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:text="LexiCare"
+    android:textSize="@dimen/ts_32"
+    android:textStyle="bold"
+    android:textColor="@color/text_primary"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:text="Aprenda com alegria"
+    android:textSize="@dimen/ts_16"
+    android:textColor="@color/text_hint"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="40dp">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="E-mail"
+    android:textSize="@dimen/ts_16"
+    android:textStyle="bold"
+    android:textColor="@color/text_primary"/>
+<EditText
+    android:id="@+id/etEmail"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="52dp"
+    android:layout_marginTop="6dp"
+    android:hint="Digite seu e-mail"
+    android:inputType="textEmailAddress"
+    android:singleLine="true"
+    android:maxLines="1"
+    android:scrollHorizontally="true"
+    android:padding="14dp"
+    android:background="@drawable/edittext_rounded"
+    android:textSize="@dimen/ts_16"
+    android:textColor="@color/text_primary"
+    android:textColorHint="@color/text_hint"/>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="18dp"
+    android:text="Senha"
+    android:textSize="@dimen/ts_16"
+    android:textStyle="bold"
+    android:textColor="@color/text_primary"/>
+<EditText
+    android:id="@+id/etSenha"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="52dp"
+    android:layout_marginTop="6dp"
+    android:hint="Digite sua senha"
+    android:inputType="textPassword"
+    android:singleLine="true"
+    android:maxLines="1"
+    android:scrollHorizontally="true"
+    android:padding="14dp"
+    android:background="@drawable/edittext_rounded"
+    android:textSize="@dimen/ts_16"
+    android:textColor="@color/text_primary"
+    android:textColorHint="@color/text_hint"/>
+<Button
+    android:id="@+id/btnEntrar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="54dp"
+    android:layout_marginTop="20dp"
+    android:text="Entrar"
+    android:textSize="@dimen/ts_18"
+    android:textStyle="bold"
+    android:textColor="@color/white"
+    android:textAllCaps="false"
+    android:background="@drawable/button_rounded"/>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="18dp"
+    android:gravity="center"
+    android:text="Ainda não tem conta?"
+    android:textSize="@dimen/ts_16"
+    android:textColor="@color/text_hint"/>
+<TextView
+    android:id="@+id/tvCadastrar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="10dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:gravity="center"
+    android:text="Cadastrar-se"
+    android:textSize="@dimen/ts_16"
+    android:textStyle="bold"
+    android:textColor="@color/primary"
+    android:clickable="true"
+    android:focusable="true"/>
+</LinearLayout>
+</br.gov.sp.etec.lexicare.views.MaxWidthLinearLayout></ScrollView>

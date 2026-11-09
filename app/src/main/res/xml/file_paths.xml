@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Pasta temporária onde a câmera grava a foto antes de você recortá-la -->
+<paths>
+    <cache-path name="fotos" path="fotos/" />
+</paths>

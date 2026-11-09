@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Paisagem (celular deitado, tablet, TV, janela larga): calendário à esquerda, tarefas à direita -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <FrameLayout
+        android:id="@+id/headerTopo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="14dp"
+        android:background="@color/background_card">
+        <br.gov.sp.etec.lexicare.views.MaxWidthLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/button_secondary"
+            android:text="←"
+            android:textSize="@dimen/ts_24"
+            android:padding="0dp"
+            android:insetTop="0dp"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="12dp" android:text="Calendário" android:textSize="@dimen/ts_20" android:textStyle="bold" android:textColor="@color/text_primary"/>
+        <Button android:id="@+id/btnAdicionarTarefa" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="44dp" android:text="Tarefa" android:textSize="@dimen/ts_14" android:textStyle="bold" android:textColor="@color/white" android:textAllCaps="false" android:background="@drawable/button_rounded"/>
+        </br.gov.sp.etec.lexicare.views.MaxWidthLinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp">
+                <CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:showWeekNumber="false"
+                    android:background="@color/background_card"/>
+            </androidx.cardview.widget.CardView>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingTop="16dp">
+            <TextView android:id="@+id/tvTarefasDoDia" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" android:text="   Tarefas do dia" android:textSize="@dimen/ts_16" android:textStyle="bold" android:textColor="@color/text_primary"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTarefas"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_margin="16dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

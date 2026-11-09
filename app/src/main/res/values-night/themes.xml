@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.LexiCare" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary_light</item>
+        <item name="colorPrimaryVariant">@color/primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorOnSecondary">@color/primary</item>
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/white</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="colorSurface">@color/background_card</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="fontFamily">sans-serif</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <!-- Overlay para o CalendarView - tema ESCURO -->
+    <style name="ThemeOverlay.LexiCare.Calendar" parent="">
+        <item name="android:colorAccent">@color/azul_vibrante_dark</item>
+        <item name="android:colorControlActivated">@color/azul_vibrante_dark</item>
+        <item name="android:colorControlHighlight">@color/azul_vibrante_dark_20</item>
+    </style>
+</resources>

@@ -1,0 +1,140 @@
+<resources>
+    <string name="app_name">LexiCare</string>
+
+    <!-- Tela de Login -->
+    <string name="login_title">LexiCare</string>
+    <string name="login_subtitle">Plataforma educativa inclusiva</string>
+    <string name="login_email_hint">E-mail</string>
+    <string name="login_password_hint">Senha</string>
+    <string name="login_button">Entrar</string>
+    <string name="login_register">Não tem conta? Cadastre-se</string>
+    <string name="login_copyright">© 2024 LexiCare - Todos os direitos reservados</string>
+
+    <!-- Tela de Cadastro -->
+    <string name="register_title">Criar conta</string>
+    <string name="register_name_hint">Nome completo</string>
+    <string name="register_age_hint">Idade</string>
+    <string name="register_grade_hint">Série / Ano escolar</string>
+    <string name="register_email_hint">E-mail</string>
+    <string name="register_password_hint">Senha</string>
+    <string name="register_disorder_label">Tipo de transtorno</string>
+    <string name="register_dyslexia">Dislexia</string>
+    <string name="register_dysgraphia">Disgrafia</string>
+    <string name="register_both">Ambos</string>
+    <string name="register_info">Essas informações ajudam a personalizar os exercícios para você.</string>
+    <string name="register_button">Cadastrar</string>
+    <string name="register_login_link">Já tem uma conta? Fazer Login</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_welcome">Olá, aluno!</string>
+    <string name="dashboard_tasks_today">📝 Tarefas de hoje: %d</string>
+    <string name="dashboard_calendar">📅 Calendário</string>
+    <string name="dashboard_exercises">📖 Exercícios de Leitura</string>
+    <string name="dashboard_caligraphy">✏️ Caligrafia</string>
+    <string name="dashboard_notes">📝 Anotações</string>
+
+    <!-- Calendário -->
+    <string name="calendar_title">📅 Calendário</string>
+    <string name="calendar_tasks_day">📋 Tarefas do dia %s: %d</string>
+    <string name="calendar_add_task">+ Adicionar Tarefa</string>
+
+    <!-- Diálogo Adicionar Tarefa -->
+    <string name="dialog_task_title">➕ Nova Tarefa</string>
+    <string name="dialog_task_title_hint">Título da tarefa</string>
+    <string name="dialog_task_description_hint">Descrição</string>
+    <string name="dialog_task_detail_hint">Detalhamento da atividade</string>
+    <string name="dialog_task_date_hint">Data (dd/MM/yyyy)</string>
+    <string name="dialog_task_time_hint">Horário</string>
+    <string name="dialog_task_difficulty">Nível de Dificuldade:</string>
+    <string name="dialog_task_easy">Fácil</string>
+    <string name="dialog_task_medium">Médio</string>
+    <string name="dialog_task_hard">Difícil</string>
+    <string name="dialog_task_color">Selecione uma cor:</string>
+    <string name="dialog_task_color_selected">Cor selecionada: Verde</string>
+    <string name="dialog_task_cancel">Cancelar</string>
+    <string name="dialog_task_save">Salvar</string>
+
+    <!-- Detalhes da Tarefa -->
+    <string name="details_title">📋 Detalhes</string>
+    <string name="details_delete">🗑️ Deletar Tarefa</string>
+
+    <!-- Exercícios -->
+    <string name="exercises_title">📖 Exercícios</string>
+    <string name="exercises_level">Selecione o nível:</string>
+    <string name="exercises_easy">🟢 Fácil</string>
+    <string name="exercises_medium">🟡 Médio</string>
+    <string name="exercises_hard">🔴 Difícil</string>
+    <string name="exercises_current_level">Nível: %s</string>
+    <string name="exercises_progress">Progresso: %d / %d | ✅ %d acertos</string>
+    <string name="exercises_question">Qual é esta palavra/letra?</string>
+
+    <!-- Caligrafia -->
+    <string name="caligraphy_title">✏️ Caligrafia</string>
+    <string name="caligraphy_current_letter">Letra atual</string>
+    <string name="caligraphy_instruction">Trace a letra no quadro abaixo</string>
+    <string name="caligraphy_progress">Letras praticadas: %d / 26</string>
+    <string name="caligraphy_clear">🗑️ Limpar</string>
+    <string name="caligraphy_verify">✅ Verificar</string>
+    <string name="caligraphy_next">⏭️ Próxima</string>
+
+    <!-- Anotações -->
+    <string name="notes_title">📝 Anotações</string>
+    <string name="notes_title_hint">Título da anotação</string>
+    <string name="notes_content_hint">Escreva sua anotação aqui...</string>
+    <string name="notes_list_title">📋 Minhas Anotações</string>
+    <string name="notes_speak">🎤 Falar</string>
+    <string name="notes_listen">🔊 Ouvir</string>
+    <string name="notes_correct">🔧 Corrigir</string>
+    <string name="notes_save">💾 Salvar</string>
+
+    <!-- Parabéns -->
+    <string name="congrats_title">PARABÉNS!</string>
+    <string name="congrats_message_default">Você completou todos os exercícios!</string>
+    <string name="congrats_excellent">🌟 Excelente! Você é um gênio!</string>
+    <string name="congrats_good">👏 Muito bem! Continue assim!</string>
+    <string name="congrats_nice">💪 Bom trabalho! Continue praticando!</string>
+    <string name="congrats_keep_going">📚 Continue praticando! Você vai melhorar!</string>
+    <string name="congrats_hits">✅ Acertos</string>
+    <string name="congrats_attempts">📝 Tentativas</string>
+    <string name="congrats_back">🏠 Voltar ao Início</string>
+
+    <!-- Mensagens de Erro -->
+    <string name="error_fill_fields">Preencha todos os campos!</string>
+    <string name="error_invalid_email">E-mail inválido</string>
+    <string name="error_password_min">A senha deve ter pelo menos 6 caracteres</string>
+    <string name="error_password_mismatch">As senhas não coincidem</string>
+    <string name="error_email_exists">Este e-mail já está cadastrado</string>
+    <string name="error_invalid_age">Digite uma idade válida</string>
+    <string name="error_select_disorder">Selecione o tipo de transtorno</string>
+    <string name="error_login_failed">❌ E-mail ou senha incorretos!</string>
+    <string name="error_voice_not_available">❌ Reconhecimento de voz não disponível!</string>
+
+    <!-- Mensagens de Sucesso -->
+    <string name="success_login">✅ Login bem-sucedido!</string>
+    <string name="success_register">✅ Cadastro realizado com sucesso!</string>
+    <string name="success_task_added">✅ Tarefa adicionada!</string>
+    <string name="success_task_deleted">Tarefa deletada!</string>
+    <string name="success_note_saved">💾 Anotação salva!</string>
+    <string name="success_note_deleted">Anotação deletada!</string>
+    <string name="success_text_corrected">🔧 Texto corrigido! (%d correções)</string>
+    <string name="success_text_already_correct">✅ Texto já está correto!</string>
+    <string name="success_voice_transcribed">🎤 Texto transcrito!</string>
+    <string name="success_canvas_cleared">🗑️ Canvas limpo!</string>
+    <string name="success_letter_verified">✅ Letra verificada! Pontuação: %d</string>
+    <string name="success_new_letter">⏭️ Nova letra: %s</string>
+
+    <!-- Mensagens de Informação -->
+    <string name="info_edit_note">✏️ Editando: %s</string>
+    <string name="info_write_to_listen">Escreva algo para ouvir!</string>
+    <string name="info_write_to_correct">Escreva algo para corrigir!</string>
+    <string name="info_fill_title_content">Preencha título e conteúdo!</string>
+    <string name="info_all_letters_practiced">🎉 Todas as letras praticadas! Parabéns!</string>
+    <string name="info_restart_letters">🎉 Parabéns! Você praticou todas as letras! Vamos recomeçar!</string>
+
+    <!-- Botões e Ações -->
+    <string name="action_back">← Voltar</string>
+    <string name="action_confirm">Sim</string>
+    <string name="action_cancel">Não</string>
+    <string name="action_delete">🗑️ Deletar</string>
+    <string name="action_edit">✏️ Editar</string>
+</resources>

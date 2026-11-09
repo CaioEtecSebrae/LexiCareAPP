@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="menu_card_altura">126dp</dimen>
+    <dimen name="canvas_altura">330dp</dimen>
+    <dimen name="exercicio_card_altura">250dp</dimen>
+    <dimen name="palavra_altura">140dp</dimen>
+</resources>

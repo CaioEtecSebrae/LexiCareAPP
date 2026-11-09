@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <br.gov.sp.etec.lexicare.views.MaxWidthLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- CABEÇALHO COM BOTÃO VOLTAR -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/btnVoltar"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/button_secondary"
+                    android:text="←"
+                    android:textSize="@dimen/ts_24"
+                    android:padding="0dp"
+                    android:insetTop="0dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="Detalhes"
+                    android:textSize="@dimen/ts_20"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary" />
+            </LinearLayout>
+
+            <!-- CARD COM OS DETALHES DA TAREFA -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp"
+                    android:background="@color/background_card">
+
+                    <!-- TÍTULO -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Título"
+                        android:textSize="@dimen/ts_13"
+                        android:textColor="@color/text_hint" />
+
+                    <TextView
+                        android:id="@+id/tvTituloDetalhe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textSize="@dimen/ts_22"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary" />
+
+                    <!-- DESCRIÇÃO -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:text="Descrição"
+                        android:textSize="@dimen/ts_13"
+                        android:textColor="@color/text_hint" />
+
+                    <TextView
+                        android:id="@+id/tvDescricaoDetalhe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textSize="@dimen/ts_16"
+                        android:textColor="@color/text_primary" />
+
+                    <!-- DETALHAMENTO -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:text="Detalhamento"
+                        android:textSize="@dimen/ts_13"
+                        android:textColor="@color/text_hint" />
+
+                    <TextView
+                        android:id="@+id/tvDetalhamentoDetalhe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textSize="@dimen/ts_16"
+                        android:textColor="@color/text_primary"
+                        android:minHeight="70dp" />
+
+                    <!-- DATA E HORÁRIO -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="18dp">
+
+                        <!-- Data -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="DD/MM/AAAA"
+                                android:textSize="@dimen/ts_13"
+                                android:textColor="@color/text_hint" />
+
+                            <TextView
+                                android:id="@+id/tvDataDetalhe"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:textSize="@dimen/ts_16"
+                                android:textStyle="bold"
+                                android:textColor="@color/text_primary" />
+                        </LinearLayout>
+
+                        <!-- Horário -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="HH:MM"
+                                android:textSize="@dimen/ts_13"
+                                android:textColor="@color/text_hint" />
+
+                            <TextView
+                                android:id="@+id/tvHorarioDetalhe"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:textSize="@dimen/ts_16"
+                                android:textStyle="bold"
+                                android:textColor="@color/text_primary" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- DIFICULDADE -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:text="Dificuldade"
+                        android:textSize="@dimen/ts_13"
+                        android:textColor="@color/text_hint" />
+
+                    <TextView
+                        android:id="@+id/tvDificuldadeDetalhe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textSize="@dimen/ts_16"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary" />
+
+                    <!-- COR DA TAREFA -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:text="Cor da tarefa"
+                        android:textSize="@dimen/ts_13"
+                        android:textColor="@color/text_hint" />
+
+                    <View
+                        android:id="@+id/viewCorDetalhe"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="6dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- BOTÃO EDITAR -->
+            <Button
+                android:id="@+id/btnEditar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="52dp"
+                android:layout_marginTop="16dp"
+                android:text="✏️ Editar tarefa"
+                android:textSize="@dimen/ts_16"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:background="@drawable/button_rounded" />
+
+            <!-- BOTÃO DELETAR -->
+            <Button
+                android:id="@+id/btnDeletar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="52dp"
+                android:layout_marginTop="10dp"
+                android:text="Deletar tarefa"
+                android:textSize="@dimen/ts_16"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:background="@drawable/button_rounded"
+                android:backgroundTint="@color/error" />
+
+        </br.gov.sp.etec.lexicare.views.MaxWidthLinearLayout>
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <br.gov.sp.etec.lexicare.views.MaxWidthLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- TÍTULO -->
+            <TextView
+                android:id="@+id/tvTituloDialogo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Adicionar tarefa"
+                android:textSize="@dimen/ts_20"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"/>
+
+            <!-- CAMPO: TÍTULO -->
+            <EditText
+                android:id="@+id/etTituloTarefa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="50dp"
+                android:layout_marginTop="14dp"
+                android:hint="Título"
+                android:padding="12dp"
+                android:background="@drawable/edittext_rounded"
+                android:inputType="textCapSentences" />
+
+            <!-- CAMPO: DESCRIÇÃO -->
+            <EditText
+                android:id="@+id/etDescricaoTarefa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="50dp"
+                android:layout_marginTop="8dp"
+                android:hint="Descrição"
+                android:padding="12dp"
+                android:background="@drawable/edittext_rounded"
+                android:inputType="textCapSentences|textMultiLine" />
+
+            <!-- CAMPO: DETALHAMENTO -->
+            <EditText
+                android:id="@+id/etDetalhamentoTarefa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="80dp"
+                android:layout_marginTop="8dp"
+                android:hint="Detalhamento"
+                android:gravity="top"
+                android:padding="12dp"
+                android:background="@drawable/edittext_rounded"
+                android:inputType="textCapSentences|textMultiLine" />
+
+
+            <!-- LINHA: DATA E HORÁRIO -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/etDataTarefa"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:layout_weight="1"
+                    android:hint="DD/MM/AAAA"
+                    android:padding="12dp"
+                    android:background="@drawable/edittext_rounded"/>
+
+                <EditText
+                    android:id="@+id/etHorarioTarefa"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:layout_marginStart="8dp"
+                    android:hint="HH:MM"
+                    android:padding="12dp"
+                    android:background="@drawable/edittext_rounded"/>
+            </LinearLayout>
+
+            <!-- SEÇÃO: DIFICULDADE -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Dificuldade"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"/>
+
+            <RadioGroup
+                android:id="@+id/rgDificuldade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rbFacil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fácil"
+                    android:buttonTint="@color/success"/>
+
+                <RadioButton
+                    android:id="@+id/rbMedio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Médio"
+                    android:checked="true"
+                    android:buttonTint="@color/warning"/>
+
+                <RadioButton
+                    android:id="@+id/rbDificil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Difícil"
+                    android:buttonTint="@color/error"/>
+            </RadioGroup>
+
+            <!-- SEÇÃO: COR DA TAREFA -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Cor da tarefa"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp">
+
+                <View
+                    android:id="@+id/colorRed"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:background="@drawable/color_red"/>
+
+                <View
+                    android:id="@+id/colorBlue"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/color_blue"/>
+
+                <View
+                    android:id="@+id/colorGreen"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/color_green"/>
+
+                <View
+                    android:id="@+id/colorOrange"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/color_orange"/>
+
+                <View
+                    android:id="@+id/colorPurple"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/color_purple"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvCorSelecionada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Cor selecionada: Verde"
+                android:textSize="@dimen/ts_13"
+                android:textColor="@color/text_hint"/>
+
+            <!-- BOTÕES DE AÇÃO -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="18dp">
+
+                <Button
+                    android:id="@+id/btnCancelar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:layout_weight="1"
+                    android:text="Cancelar"
+                    android:textAllCaps="false"
+                    android:background="@drawable/button_secondary"/>
+
+                <Button
+                    android:id="@+id/btnSalvarTarefa"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:text="Adicionar"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_rounded"/>
+            </LinearLayout>
+
+        </br.gov.sp.etec.lexicare.views.MaxWidthLinearLayout>
+    </ScrollView>
+</FrameLayout>
